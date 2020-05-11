@@ -2,6 +2,7 @@ import processing.core.PApplet;
 
 public class App extends PApplet
 {
+    //hi max
     private Rank r0 = new Rank ("Two", 2);
     private Rank r1 = new Rank ("Three", 3);
     private Rank r2 = new Rank ("Four", 4);
