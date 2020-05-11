@@ -30,7 +30,17 @@ public class App extends PApplet
     public void settings()
     {
         size(400,400);
-        println(c);
+
+    }
+
+    public void setup()
+    {
+        System.out.println(c);
+    }
+
+    public static void main (String[] args)
+    {
+        PApplet.main ("App");
     }
 
 
