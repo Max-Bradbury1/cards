@@ -10,6 +10,6 @@ public class Card {
     }
 
     public String toString() {
-        return myRank.toString() + mySuit.toString();
+        return myRank.toString() + " " + mySuit.toString();
     }
 }
