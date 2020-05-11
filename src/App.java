@@ -23,18 +23,16 @@ public class App extends PApplet
     private Suit clubs = new Suit ("Clubs", 0);
     private Suit spades = new Suit ("Spades", 0);
 
-    //Card c = new Card(r0, diamonds);
+
+    Card c = new Card(r0, diamonds);
+
 
     public void settings()
     {
         size(400,400);
-
+        println(c);
     }
 
 
-    public static void main(String[] args)
-    {
-        PApplet.main("App");
-    }
 
 }
