@@ -26,7 +26,8 @@ public class Deck {
     private Suit[] allSuites = {diamonds, hearts, clubs, spades};
 
 
-    Card c = new Card(r0, diamonds);
+    Card c = new Card(r0, hearts);
+
 
 
     private Card[] allCards;
@@ -43,7 +44,6 @@ public class Deck {
                 System.out.println(allCards[cardLength]);
                 cardLength++;
             }
-            cardLength++;
         }
     }
 }
