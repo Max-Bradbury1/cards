@@ -38,11 +38,12 @@ public class Deck {
 
         for (int i = 0; i <= allSuites.length; i++) {
 
-            for(int k =0; k <= allRanks.length; k++){
-                allCards[cardLength] = new Card (allRanks[k],allSuites[i]);
+            for (int k = 0; k <= allRanks.length; k++) {
+                allCards[cardLength] = new Card(allRanks[k], allSuites[i]);
                 System.out.println(allCards[cardLength]);
                 cardLength++;
             }
+            cardLength++;
         }
     }
 }
