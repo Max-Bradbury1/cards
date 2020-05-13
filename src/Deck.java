@@ -25,11 +25,7 @@ public class Deck {
     private Suit spades = new Suit("Spades", 0);
     private Suit[] allSuites = {diamonds, hearts, clubs, spades};
 
-
-    Card c = new Card(r0, hearts);
-
-
-
+    
     private Card[] allCards;
 
     public Deck() {
