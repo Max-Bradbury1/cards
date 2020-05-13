@@ -2,7 +2,7 @@
 
 public class Deck {
 
-    Deck d;
+
 
     private Rank r0 = new Rank("Two", 2);
     private Rank r1 = new Rank("Three", 3);
@@ -29,19 +29,24 @@ public class Deck {
     Card c = new Card(r0, diamonds);
 
 
-    private Card allCards;
+    private Card[] allCards;
 
-    public Deck(Card deck) {
+    public Deck() {
 
-        allCards = deck;
-        Card[] allCards = new Card[52];
+        allCards = new Card[52];
+        int cardLength = 0;
 
+        for (int i = 0; i <= allSuites.length; i++) {
 
-        for (int i = 0; i <= allSuits.length; i++) {
-
+            for(int k =0; k <= allRanks.length; k++){
+                allCards[cardLength] = new Card (allRanks[k],allSuites[i]);
+                System.out.println(allCards[cardLength]);
+                cardLength++;
+            }
         }
     }
 }
+
 
 
 
