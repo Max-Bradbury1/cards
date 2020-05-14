@@ -23,7 +23,7 @@ public class Deck {
     private Suit hearts = new Suit("Hearts", 0);
     private Suit clubs = new Suit("Clubs", 0);
     private Suit spades = new Suit("Spades", 0);
-    private Suit[] allSuites = {diamonds, hearts, clubs, spades};
+    private Suit[] allSuits = {diamonds, hearts, clubs, spades};
 
 
     private Card[] allCards;
@@ -34,10 +34,10 @@ public class Deck {
         allCards = new Card[52];
         int cardLength = 0;
 
-        for (int i = 0; i < allSuites.length; i++) {
+        for (int i = 0; i < allSuits.length; i++) {
 
             for (int k = 0; k < allRanks.length; k++) {
-                allCards[cardLength] = new Card(allRanks[k], allSuites[i]);
+                allCards[cardLength] = new Card(allRanks[k], allSuits[i]);
                 cardLength++;
             }
         }
