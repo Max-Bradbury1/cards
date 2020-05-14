@@ -25,8 +25,9 @@ public class Deck {
     private Suit spades = new Suit("Spades", 0);
     private Suit[] allSuites = {diamonds, hearts, clubs, spades};
 
-    
+
     private Card[] allCards;
+    private int top = 0;
 
     public Deck() {
 
@@ -37,19 +38,35 @@ public class Deck {
 
             for (int k = 0; k < allRanks.length; k++) {
                 allCards[cardLength] = new Card(allRanks[k], allSuites[i]);
-                System.out.println(allCards[cardLength]);
                 cardLength++;
             }
         }
     }
-}
+    public Card deal(){
+        if(top < allCards.length){
+            Card currentCard = allCards[top];
+            top++;
+            return currentCard;
+        }
+        return null;
+    }
+    public void Shuffle() {
+        for (int i = 0; i < 26; i++) {
+            int r1 = (int) (Math.random() * 52);
+            int r2 = (int) (Math.random() * 52);
 
+            Card temp = allCards[r1];
+            allCards[r1] = allCards[r2];
+            allCards[r2] = temp;
 
+        }
+    }
+        public String toString(){
+            String s ="";
+            for(int i=0;i<allCards.length;i++){
+                s =s + allCards[i].toString()+ "\n";
+            }
+            return s;
+        }
 
-
-
-
-
-
-
-
+    }
